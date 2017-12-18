@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{monsterGroup.generation | uppercase}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let monster of monsterGroup.monsters">
+        <ion-card-header>
+            {{monster.name}}
+        </ion-card-header>
+        <ion-card-content>
+            Habitat: {{monster.habitat}}
+        </ion-card-content>
+        <ion-row>
+            <ion-col text-right>
+                <button ion-button clear small (click)="onAddToFavorite(monster)">Favorite</button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>
