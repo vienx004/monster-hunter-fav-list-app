@@ -1,0 +1,25 @@
+monsters-page {
+    .habitat {
+        color: grey;
+        text-align: left;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+    }
+
+    .name {
+        font-size: 150%;
+        padding-left: 8px;
+    }
+
+    .monster-image {
+        background-color: white;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-header {
+        padding-bottom: 0px;
+    }
+}

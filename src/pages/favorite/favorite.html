@@ -5,5 +5,25 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-list>
+        <ion-item-sliding *ngFor="let monster of monsters">
+            <ion-item (click)="onViewMonster(monster)">
+                <div class="row">
+                        <ion-img class="monster-image" src="{{monster.image}}"></ion-img>
+                    <div class="col" align="left">
+                        <h2>{{monster.name}}</h2>
+                        <p>Habitat: {{monster.habitat}}</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="danger" (click)="onRemoveFromFavorites(monster)">
+                    <ion-icon name="trash"></ion-icon>
+                    Delete
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>
+
+<!--modal is just overlay over current page, does not push on a new page-->

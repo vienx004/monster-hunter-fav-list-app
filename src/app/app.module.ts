@@ -1,3 +1,4 @@
+import { MonstersService } from './../services/monsters.service';
 import { MonstersPage } from './../pages/monsters-library/monsters/monsters';
 import { LibraryPage } from './../pages/library/library';
 import { TabsPage } from './../pages/tabs/tabs';
@@ -46,7 +47,8 @@ import { FaveMonsterPage } from './../pages/favorite/fave-monster/fave-monster';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MonstersService
   ]
 })
 export class AppModule {}

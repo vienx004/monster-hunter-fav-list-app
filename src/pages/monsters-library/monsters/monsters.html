@@ -7,14 +7,19 @@
 <ion-content>
     <ion-card *ngFor="let monster of monsterGroup.monsters">
         <ion-card-header>
-            {{monster.name}}
+            <div class="row">
+                <ion-img class="monster-image" src="{{monster.image}}"></ion-img>
+                <p class="name">{{monster.name}}<p>
+            </div>
         </ion-card-header>
         <ion-card-content>
-            Habitat: {{monster.habitat}}
+            
+            <p class="habitat">Habitat: {{monster.habitat}}</p>
         </ion-card-content>
         <ion-row>
             <ion-col text-right>
-                <button ion-button clear small (click)="onAddToFavorite(monster)">Favorite</button>
+                <button ion-button clear small (click)="onAddToFavorite(monster)" *ngIf="!isFavorite(monster)">Favorite</button>
+                <button ion-button clear color="danger" small (click)="onRemoveFromFavorite(monster)" *ngIf="isFavorite(monster)">Unfavorite</button>            
             </ion-col>
         </ion-row>
     </ion-card>

@@ -1,9 +1,29 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Name:</ion-title>
+        <ion-title>{{name}}</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    
+<!--text center centers all of the content  -->
+<ion-content text-center>
+    <ion-card>
+        <ion-card-header>
+            <div class="row">
+                <ion-img class="monster-image" src="{{image}}"></ion-img>
+                <p class="name">{{name}}</p>
+            </div>
+        </ion-card-header>
+            <ion-card-content>
+                <p>Habitat: {{habitat}}</p>
+            </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button small outline color="danger" (click)="onClose(true)">Unfavorite</button>
+            </ion-col>
+        </ion-row>   
+    </ion-card>
+    <button ion-button color="danger" (click)="onClose()">Close</button>
 </ion-content>
+
+
+<!--modal used for overal over current page, does not navigate to new page -->
