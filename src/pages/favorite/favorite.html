@@ -5,14 +5,14 @@
                     <ion-icon name="menu"></ion-icon>
                 </button>
             </ion-buttons>
-            <ion-title>Favorites</ion-title>
+            <ion-title class="title">Favorites</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
     <ion-list>
         <ion-item-sliding *ngFor="let monster of monsters">
-            <ion-item (click)="onViewMonster(monster)">
+            <ion-item [color]="getBackground()" detail-push (click)="onViewMonster(monster)">
                 <div class="row">
                         <ion-img class="monster-image" src="{{monster.image}}"></ion-img>
                     <div class="col" align="left">

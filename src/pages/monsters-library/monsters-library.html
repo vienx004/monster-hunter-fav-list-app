@@ -5,14 +5,14 @@
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>Monsters Library</ion-title>
+        <ion-title class="title">Monsters Library</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <h3 text-center>Select your favorite Monster</h3>
     <ion-list>
-        <button ion-item *ngFor="let monsterGroup of monsterCollection" [navPush]="monstersPage" [navParams]="monsterGroup">
+        <button ion-item detail-push *ngFor="let monsterGroup of monsterCollection" [navPush]="monstersPage" [navParams]="monsterGroup">
             <ion-icon [name]="monsterGroup.icon" item-left></ion-icon>
             <h2>{{ monsterGroup.generation | uppercase}}</h2>
             <p>{{ monsterGroup.monsters.length }} Monsters</p>

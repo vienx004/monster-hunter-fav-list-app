@@ -1,3 +1,4 @@
+import { SettingsService } from './../services/settings.service';
 import { MonstersService } from './../services/monsters.service';
 import { MonstersPage } from './../pages/monsters-library/monsters/monsters';
 import { LibraryPage } from './../pages/library/library';
@@ -48,7 +49,8 @@ import { FaveMonsterPage } from './../pages/favorite/fave-monster/fave-monster';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MonstersService
+    MonstersService,
+    SettingsService
   ]
 })
 export class AppModule {}
