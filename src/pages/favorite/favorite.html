@@ -1,6 +1,11 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Favorites</ion-title>
+            <ion-buttons left>
+                <button ion-button menuToggle>
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+            </ion-buttons>
+            <ion-title>Favorites</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -26,4 +31,4 @@
     </ion-list>
 </ion-content>
 
-<!--modal is just overlay over current page, does not push on a new page-->
+<!--modal is just overlay over current page, does not push on a new page, need to use view controller to dismiss-->

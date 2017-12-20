@@ -2,7 +2,7 @@ import { FaveMonsterPage } from './fave-monster/fave-monster';
 import { MonstersService } from './../../services/monsters.service';
 import { Monster } from './../../data/monsters.interface';
 import { Component } from '@angular/core';
-import { ModalController } from 'ionic-angular';
+import { ModalController} from 'ionic-angular';
 
 @Component({
     selector: 'favorite-page',
@@ -38,4 +38,5 @@ export class FavoritePage {
         this.monstersService.removeMonsterFromFavorites(monster);
         this.monsters = this.monstersService.getFavoriteMonsters();
     }
+
 }
