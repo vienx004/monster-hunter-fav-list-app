@@ -27,9 +27,9 @@ export class FavoritePage {
         const modal = this.modalCtrl.create(this.faveMonsterPage, monster);
         modal.present();
         modal.onDidDismiss((remove: boolean) => {
-            if(remove === false) {
-            }
-                this.onRemoveFromFavorites(monster);
+            if(remove == true) {
+                this.onRemoveFromFavorites(monster);    
+        }
         });
     }
 
